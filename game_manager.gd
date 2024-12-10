@@ -6,7 +6,7 @@ var customer:float = 0
 var money_s:float = 0
 var customer_s:float = 0
 
-var click_amount:float = 5
+var click_amount:float = 1
 
 
 var upgrade1_cost = 25
