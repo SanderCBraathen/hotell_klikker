@@ -21,6 +21,5 @@ func _on_texture_button_pressed() -> void:
 func _on_timer_timeout() -> void:
 	var money:float = GameManager.money_s * 0.1
 	var customer:float = GameManager.customer_s * 0.1
-	
 	GameManager.money += money
 	GameManager.customer += customer
