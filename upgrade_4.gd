@@ -18,7 +18,7 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
-	GameManager.money -= GameManager.upgrade2_cost
+	GameManager.money -= GameManager.upgrade4_cost
 	GameManager.upgrade4_amount += 1
 	GameManager.upgrade4_cost *= 1.25
 	GameManager.money_s += GameManager.upgrade4_money
