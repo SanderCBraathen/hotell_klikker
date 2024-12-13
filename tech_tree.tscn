@@ -1,0 +1,91 @@
+[gd_scene load_steps=8 format=3 uid="uid://lqtletmlu1pu"]
+
+[ext_resource type="Script" path="res://tech_tree.gd" id="1_8lh5b"]
+[ext_resource type="Texture2D" uid="uid://c4aejhvhdjttf" path="res://art/Lvl1.png" id="1_uk4fv"]
+[ext_resource type="Texture2D" uid="uid://cq6gs82kymih8" path="res://art/bought.png" id="2_sbnq1"]
+[ext_resource type="Texture2D" uid="uid://ceynw2ncyb2wh" path="res://art/lvl2.png" id="3_43nsf"]
+[ext_resource type="Texture2D" uid="uid://bmhwiybwl2c3l" path="res://art/lvl3.png" id="4_02fje"]
+[ext_resource type="Texture2D" uid="uid://biddu8mbqa4t3" path="res://art/Not_enough_money.png" id="4_78nfe"]
+[ext_resource type="Texture2D" uid="uid://btv4xfmmr5686" path="res://art/lvl4.png" id="5_q3nsq"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8lh5b")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="click" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="lvl1" type="TextureButton" parent="MarginContainer/HBoxContainer/click"]
+layout_mode = 2
+disabled = true
+toggle_mode = true
+texture_normal = ExtResource("1_uk4fv")
+texture_pressed = ExtResource("2_sbnq1")
+texture_disabled = ExtResource("4_78nfe")
+
+[node name="lvl2" type="TextureButton" parent="MarginContainer/HBoxContainer/click"]
+layout_mode = 2
+disabled = true
+toggle_mode = true
+texture_normal = ExtResource("3_43nsf")
+texture_pressed = ExtResource("2_sbnq1")
+texture_disabled = ExtResource("4_78nfe")
+
+[node name="lvl3" type="TextureButton" parent="MarginContainer/HBoxContainer/click"]
+layout_mode = 2
+disabled = true
+toggle_mode = true
+texture_normal = ExtResource("4_02fje")
+texture_pressed = ExtResource("2_sbnq1")
+texture_disabled = ExtResource("4_78nfe")
+
+[node name="lvl4" type="TextureButton" parent="MarginContainer/HBoxContainer/click"]
+layout_mode = 2
+disabled = true
+toggle_mode = true
+texture_normal = ExtResource("5_q3nsq")
+texture_pressed = ExtResource("2_sbnq1")
+texture_disabled = ExtResource("4_78nfe")
+
+[node name="money" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="customer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="other" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+offset_right = 8.0
+grow_vertical = 0
+text = "Back"
