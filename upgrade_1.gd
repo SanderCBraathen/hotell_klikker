@@ -12,6 +12,10 @@ func _process(delta: float) -> void:
 	else:
 		self.disabled = false
 	
+	if GameManager.upgrade1_cost >= 1000:
+		$cost.text = str(GameManager.upgrade1_cost / 1000).pad_decimals(1) + "K"
+	else:
+		$cost.text = str(GameManager.upgrade1_cost).pad_decimals(0)
 	
 	$cost.text = str(GameManager.upgrade1_cost).pad_decimals(0)
 	$amount.text = str(GameManager.upgrade1_amount)
